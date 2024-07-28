@@ -9,17 +9,20 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>yan0kom.technesis</groupId>
     <artifactId>server</artifactId>
     <version>1.0</version>
     <name>Spring Boot backend</name>
+
+    <properties>
+        <springboot.version>3.3.2</springboot.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.3.2</version>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -61,6 +64,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${springboot.version}</version>
                 <configuration>
                     <mainClass>technesis.server.ServerApp</mainClass>
                     <layout>JAR</layout>
